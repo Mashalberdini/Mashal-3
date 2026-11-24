@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>مشعل محمد | Mishal Mohammed - Cybersecurity</title>
+  <meta name="description" content="الموقع الشخصي لمشعل محمد، مهتم بالأمن السيبراني والتقنيات الرقمية والحلول التقنية الحديثة.">
+  <meta name="keywords" content="مشعل محمد, الأمن السيبراني, Cybersecurity, التقنية, الحماية الرقمية">
+  <meta name="author" content="Mishal Mohammed">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080d18;--bg2:#0d1423;--card:#111b2c;--gold:#d6b36a;--gold-light:#f1d69b;--white:#f5f7fb;--muted:#9aa8ba;--border:rgba(214,179,106,.17)}
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--white);font-family:'Cairo',sans-serif;line-height:1.8;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}button{font-family:inherit}
+    .container{width:min(1150px,90%);margin:auto}
+    body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 15% 15%,rgba(35,90,130,.16),transparent 35%),radial-gradient(circle at 85% 50%,rgba(214,179,106,.07),transparent 35%)}
+    header{position:fixed;top:0;right:0;width:100%;z-index:1000;background:rgba(8,13,24,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    nav{min-height:78px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Space Grotesk',sans-serif;font-size:23px;font-weight:700;direction:ltr}.logo span{color:var(--gold)}
+    .nav-links{display:flex;align-items:center;gap:30px;list-style:none}.nav-links a{color:var(--muted);font-size:14px;transition:.3s}.nav-links a:hover{color:var(--gold)}
+    .nav-contact{border:1px solid var(--gold);color:var(--gold)!important;padding:8px 20px;border-radius:30px}
+    .menu-btn{display:none;background:none;color:var(--gold);border:none;font-size:27px;cursor:pointer}
+    .hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;position:relative}
+    .hero-content{max-width:800px}
+    .status{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;background:rgba(214,179,106,.08);border:1px solid var(--border);color:var(--gold-light);border-radius:40px;font-size:13px;margin-bottom:28px}
+    .status-dot{width:8px;height:8px;background:#57d69b;border-radius:50%;box-shadow:0 0 12px #57d69b}
+    .hero h1{font-size:clamp(38px,7vw,75px);font-weight:900;line-height:1.35;margin-bottom:12px}.hero h1 span{color:var(--gold)}
+    .english-name{font-family:'Space Grotesk',sans-serif;direction:ltr;display:inline-block;font-size:clamp(20px,3vw,29px);color:#b7c3d3;letter-spacing:2px;margin-bottom:20px}
+    .hero p{color:var(--muted);max-width:650px;font-size:17px;margin-bottom:35px}
+    .buttons{display:flex;gap:15px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;border-radius:8px;font-size:14px;font-weight:700;transition:.3s;cursor:pointer}
+    .btn-primary{background:var(--gold);color:#101522}.btn-primary:hover{background:var(--gold-light);transform:translateY(-3px)}
+    .btn-outline{border:1px solid var(--border);color:var(--white)}.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    .hero-decoration{position:absolute;left:8%;top:28%;width:250px;height:250px;border:1px solid rgba(214,179,106,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(214,179,106,.55);font-size:85px;box-shadow:0 0 80px rgba(214,179,106,.05)}
+    .hero-decoration::before{content:"";position:absolute;width:190px;height:190px;border:1px dashed rgba(214,179,106,.3);border-radius:50%;animation:rotate 25s linear infinite}
+    @keyframes rotate{to{transform:rotate(360deg)}}
+    section{padding:100px 0;scroll-margin-top:75px}
+    .section-heading{text-align:center;margin-bottom:55px}.section-heading small{color:var(--gold);font-family:'Space Grotesk',sans-serif;letter-spacing:3px;font-size:12px;direction:ltr;display:inline-block}
+    .section-heading h2{font-size:34px;margin:8px 0}.section-heading p{color:var(--muted);font-size:14px}
+    .about,.skills,.contact{background:var(--bg2);border-block:1px solid var(--border)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-box{background:linear-gradient(145deg,#142238,#0c1421);border:1px solid var(--border);padding:40px;border-radius:18px;text-align:center}
+    .shield{font-size:85px;color:var(--gold);margin-bottom:15px}.about-box h3{font-size:22px}.about-box p{color:var(--muted);font-size:14px}
+    .about-text h3{font-size:27px;margin-bottom:15px}.about-text h3 span{color:var(--gold)}.about-text p{color:var(--muted);margin-bottom:15px}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service-card{background:var(--card);border:1px solid var(--border);padding:30px;border-radius:14px;transition:.3s}
+    .service-card:hover{transform:translateY(-8px);border-color:var(--gold);background:#142238}
+    .service-icon{width:55px;height:55px;display:grid;place-items:center;background:rgba(214,179,106,.1);color:var(--gold);border-radius:12px;font-size:26px;margin-bottom:20px}
+    .service-card h3{font-size:19px;margin-bottom:10px}.service-card p{color:var(--muted);font-size:13px}
+    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill{padding:25px 15px;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:12px;transition:.3s}
+    .skill:hover{border-color:var(--gold);transform:translateY(-5px)}.skill span{display:block;font-size:30px;color:var(--gold);margin-bottom:8px}.skill h3{font-size:14px}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.project{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:30px}
+    .project-label{display:inline-block;color:var(--gold);font-size:12px;margin-bottom:12px}.project h3{font-size:21px;margin-bottom:10px}.project p{color:var(--muted);font-size:14px}
+    .contact-box{max-width:750px;margin:auto;text-align:center;background:var(--card);border:1px solid var(--border);padding:45px 25px;border-radius:18px}
+    .contact-box h3{font-size:27px;margin-bottom:12px}.contact-box p{color:var(--muted);margin-bottom:25px}
+    .contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}footer span{color:var(--gold)}
+    .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:850px){.hero-decoration{opacity:.15;left:-80px}.services-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.menu-btn{display:block}.nav-links{display:none;position:absolute;top:78px;right:0;width:100%;padding:25px;background:#0d1423;border-bottom:1px solid var(--border);flex-direction:column;gap:18px}.nav-links.active{display:flex}
+      .hero{min-height:90vh}.hero h1{font-size:43px}.hero p{font-size:14px}.hero-decoration{width:180px;height:180px;top:20%}
+      section{padding:75px 0}.section-heading h2{font-size:27px}.services-grid,.projects-grid{grid-template-columns:1fr}.about-box{padding:30px 15px}.contact-box{padding:35px 15px}.buttons .btn{width:100%}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="#home" class="logo">MISHAL<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">الرئيسية</a></li><li><a href="#about">من أنا</a></li><li><a href="#services">الخدمات</a></li>
+        <li><a href="#skills">المهارات</a></li><li><a href="#projects">المشاريع</a></li><li><a href="#contact" class="nav-contact">تواصل معي</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home"><div class="container">
+      <div class="hero-content reveal">
+        <div class="status"><span class="status-dot"></span> مهتم بالأمن السيبراني والتقنية</div>
+        <h1>مرحباً، أنا<br><span>مشعل محمد</span></h1>
+        <div class="english-name">MISHAL MOHAMMED</div>
+        <p>شغوف بعالم التقنية والأمن السيبراني، مهتم بحماية الأنظمة والبيانات الرقمية، واستكشاف الحلول التقنية الحديثة لبناء مستقبل رقمي أكثر أماناً.</p>
+        <div class="buttons"><a href="#about" class="btn btn-primary">اكتشف المزيد</a><a href="#contact" class="btn btn-outline">تواصل معي</a></div>
+      </div><div class="hero-decoration" aria-hidden="true">◈</div>
+    </div></section>
+    <section class="about" id="about"><div class="container">
+      <div class="section-heading reveal"><small>ABOUT ME</small><h2>من أنا؟</h2><p>نبذة مختصرة عن اهتماماتي وتوجهي التقني</p></div>
+      <div class="about-grid">
+        <div class="about-box reveal"><div class="shield">♢</div><h3>Mishal Mohammed</h3><p>Cybersecurity Enthusiast</p></div>
+        <div class="about-text reveal"><h3>التقنية شغف، <span>والأمان هدف.</span></h3>
+          <p>أنا مشعل محمد، مهتم بمجال الأمن السيبراني والتقنيات الرقمية، وأسعى إلى تطوير معرفتي ومهاراتي في حماية المعلومات والأنظمة والتعامل مع التحديات الرقمية.</p>
+          <p>أؤمن بأن التعلم المستمر والتطوير العملي هما أساس التميز في المجال التقني، وأسعى لاكتساب الخبرات والمشاركة في مشاريع تقنية مبتكرة.</p>
+        </div>
+      </div>
+    </div></section>
+    <section id="services"><div class="container">
+      <div class="section-heading reveal"><small>MY SERVICES</small><h2>مجالات اهتمامي</h2><p>مجالات تقنية أركز على تعلمها وتطوير مهاراتي فيها</p></div>
+      <div class="services-grid">
+        <article class="service-card reveal"><div class="service-icon">⌑</div><h3>الأمن السيبراني</h3><p>الاهتمام بمفاهيم الأمن السيبراني وأساليب حماية الأنظمة والمعلومات من التهديدات الرقمية.</p></article>
+        <article class="service-card reveal"><div class="service-icon">⌘</div><h3>أمن المعلومات</h3><p>التعرف على مبادئ سرية البيانات وسلامتها وتوافرها وطرق حمايتها.</p></article>
+        <article class="service-card reveal"><div class="service-icon">⌁</div><h3>أمن الشبكات</h3><p>دراسة أساسيات الشبكات ومفاهيم تأمين الاتصالات والبنية التحتية الرقمية.</p></article>
+        <article class="service-card reveal"><div class="service-icon">⌨</div><h3>تطوير المواقع</h3><p>تصميم صفحات ويب عصرية وتطوير واجهات رقمية باستخدام تقنيات الويب.</p></article>
+        <article class="service-card reveal"><div class="service-icon">◉</div><h3>التوعية الرقمية</h3><p>نشر الوعي بالمخاطر الرقمية والتصيد الإلكتروني وأهمية كلمات المرور الآمنة.</p></article>
+        <article class="service-card reveal"><div class="service-icon">✧</div><h3>التقنيات الحديثة</h3><p>استكشاف أدوات وتقنيات حديثة وتطوير حلول رقمية تساعد على تحسين التجربة التقنية.</p></article>
+      </div>
+    </div></section>
+    <section class="skills" id="skills"><div class="container">
+      <div class="section-heading reveal"><small>MY SKILLS</small><h2>المهارات التقنية</h2><p>مجالات معرفية وتقنية أعمل على تطويرها</p></div>
+      <div class="skills-grid">
+        <div class="skill reveal"><span>⌑</span><h3>Cybersecurity</h3></div><div class="skill reveal"><span>⌘</span><h3>Network Security</h3></div>
+        <div class="skill reveal"><span>⌨</span><h3>HTML &amp; CSS</h3></div><div class="skill reveal"><span>⚙</span><h3>Programming</h3></div>
+        <div class="skill reveal"><span>◈</span><h3>Information Security</h3></div><div class="skill reveal"><span>◎</span><h3>Digital Awareness</h3></div>
+        <div class="skill reveal"><span>✧</span><h3>Problem Solving</h3></div><div class="skill reveal"><span>⌬</span><h3>Technology</h3></div>
+      </div>
+    </div></section>
+    <section id="projects"><div class="container">
+      <div class="section-heading reveal"><small>MY PROJECTS</small><h2>الأعمال والمشاريع</h2><p>مساحة لعرض المشاريع والتجارب التقنية</p></div>
+      <div class="projects-grid">
+        <article class="project reveal"><span class="project-label">CYBERSECURITY</span><h3>مشروع الأمن السيبراني</h3><p>مشروع تعريفي يسلط الضوء على أهمية الأمن السيبراني وأساليب حماية المستخدمين في العالم الرقمي.</p></article>
+        <article class="project reveal"><span class="project-label">WEB DEVELOPMENT</span><h3>تصميم المواقع الإلكترونية</h3><p>تطوير واجهات مواقع إلكترونية عصرية تهتم بسهولة الاستخدام والتصميم المتجاوب.</p></article>
+      </div>
+    </div></section>
+    <section class="contact" id="contact"><div class="container">
+      <div class="section-heading reveal"><small>CONTACT ME</small><h2>لنتواصل معاً</h2><p>يسعدني التواصل وتبادل الأفكار والفرص التقنية</p></div>
+      <div class="contact-box reveal"><h3>هل لديك فكرة أو مشروع؟</h3><p>يمكنك التواصل معي لمناقشة الأفكار والمشاريع والاهتمامات التقنية.</p>
+        <div class="contact-links">
+          <!-- استبدل الرقم برقمك بصيغة دولية، مثال السعودية: 9665XXXXXXXX -->
+          <a href="https://wa.me/9665XXXXXXXX" target="_blank" rel="noopener noreferrer" class="btn btn-primary">واتساب</a>
+          <!-- استبدل البريد ببريدك الحقيقي -->
+          <a href="mailto:your@email.com" class="btn btn-outline">البريد الإلكتروني</a>
+        </div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container"><p>جميع الحقوق محفوظة © <span id="year"></span> <span>Mishal Mohammed</span></p><p>Cybersecurity | Technology | Innovation</p></div></footer>
+  <script>
+    "use strict";
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",function(){
+      const isOpen=navLinks.classList.toggle("active");
+      menuBtn.setAttribute("aria-expanded",String(isOpen));
+      menuBtn.textContent=isOpen?"✕":"☰";
+    });
+    document.querySelectorAll(".nav-links a").forEach(function(link){
+      link.addEventListener("click",function(){
+        navLinks.classList.remove("active");
+        menuBtn.setAttribute("aria-expanded","false");
+        menuBtn.textContent="☰";
+      });
+    });
+    document.getElementById("year").textContent=new Date().getFullYear();
+    const revealElements=document.querySelectorAll(".reveal");
+    if("IntersectionObserver" in window){
+      const observer=new IntersectionObserver(function(entries,observerInstance){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){entry.target.classList.add("visible");observerInstance.unobserve(entry.target);}
+        });
+      },{threshold:0.12});
+      revealElements.forEach(function(element){observer.observe(element);});
+    }else{
+      revealElements.forEach(function(element){element.classList.add("visible");});
+    }
+  </script>
+</body>
+</html>
